@@ -1,0 +1,83 @@
+.calculadora{
+  /*display:block;*/
+  margin:0 auto;
+  /*padding:20px;*/
+  /*background-color:#2980b9;*/
+  width:400px;
+  height:auto;
+  border-radius: 25px;
+/*    -webkit-box-shadow: -1px -4px 34px -1px rgba(0,0,0,0.69);
+-moz-box-shadow: -1px -4px 34px -1px rgba(0,0,0,0.69);
+box-shadow: -1px -4px 34px -1px rgba(0,0,0,0.69);*/
+}
+/*.calculadora td button{
+  display:block;
+  width:70px;
+  height: 70px;
+  font-size: 25px;
+}*/
+
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .simbolo_integral {
+            font-size: 4em;
+            text-align: center;
+        }
+
+        .limites {
+            width: 45% !important;
+            margin-bottom: 10px;
+        }
+
+        .resolver {
+            width: 100%;
+        }
+
+        .operacion {
+            width: 100%;
+        }
+
+        .operaciones {
+            width: 100%;
+        }
+
+        input {
+            /*border: none;*/
+            border-radius: 5px;
+        }
+
+        .titulo_tabla {
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .resultado_funciones {
+            font-size: 12px;
+            display: none;
+        }
+        
+        .tabla_resultados{
+            /*width: 30%;*/
+            /*margin-bottom: 1rem;*/
+    color: #212529;
+            border-collapse: collapse;
+            box-sizing: border-box;
+            border-spacing: 2px;
+    border-color: grey;
+            text-align: left;
+        }
+        
+        .fila_resultado:hover{
+            background-color: #e7ecf1;
+        }
+
+        .fila_resultado{
+            font-style: italic;
+        }
+        
+        .gif img{
+            width: 10% !important;
+        }

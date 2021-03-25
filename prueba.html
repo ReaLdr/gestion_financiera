@@ -1,0 +1,100 @@
+<div class="display">
+    <p>
+        <input type="text" readonly size="14" id="d">
+        <input type="button" class="button black" value="C" onclick='c("")'>
+    </p>
+</div>
+<div class="keys">
+    <p>
+        <input type="button" class="button black" value="1" onclick='v("1")'>
+        <input type="button" class="button black" value="2" onclick='v("2")'>
+        <input type="button" class="button black" value="3" onclick='v("3")'>
+        <input type="button" class="button pink" value="+" onclick='v("+")'>
+    </p>
+    <p>
+        <input type="button" class="button black" value="4" onclick='v("4")'>
+        <input type="button" class="button black" value="5" onclick='v("5")'>
+        <input type="button" class="button black" value="6" onclick='v("6")'>
+        <input type="button" class="button pink" value="-" onclick='v("-")'>
+    </p>
+    <p>
+        <input type="button" class="button black" value="7" onclick='v("7")'>
+        <input type="button" class="button black" value="8" onclick='v("8")'>
+        <input type="button" class="button black" value="9" onclick='v("9")'>
+        <input type="button" class="button pink" value="*" onclick='v("*")'></p>
+
+    <p>
+        <input type="button" class="button black" value="." onclick='v(".")'>
+        <input type="button" class="button black" value="0" onclick='v("0")'>
+        <input type="button" class="button orange" value="=" onclick='e()'>
+        <input type="button" class="button pink" value="/" onclick='v("/")'>
+    </p>
+
+    <p>
+        <input type="button" class="button black" value="sin" onclick='d("sin")'>
+        <input type="button" class="button black" value="cos" onclick='d("cos")'>
+        <input type="button" class="button orange" value="1/x" onclick='d("envers")'>
+        <input type="button" class="button pink" value="sqrt" onclick='d("sqrt")'>
+    </p>
+</div>
+
+
+<script>
+    function d(val) {
+        if (val == "sin") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = Math.sin(x);
+        }
+        if (val == "cos") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = Math.cos(x);
+        }
+        if (val == "envers") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = eval(1 / x);
+        }
+        if (val == "sqrt") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = Math.sqrt(x);
+        }
+    }
+
+    function c(val) {
+        document.getElementById("d").value = val;
+    }
+
+    function v(val) {
+        document.getElementById("d").value += val;
+    }
+
+    function e() {
+        try {
+            c(eval(document.getElementById("d").value))
+        } catch (e) {
+            c('Error')
+        }
+    }
+
+    function d(val) {
+
+        if (val == "sin") {
+            var x = document.getElementById("d").value;
+            x = x * Math.PI / 180;
+            document.getElementById("d").value = Math.sin(x);
+        }
+        if (val == "cos") {
+            var x = document.getElementById("d").value;
+            x = x * Math.PI / 180;
+            document.getElementById("d").value = Math.cos(x);
+        }
+        if (val == "envers") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = eval(1 / x);
+        }
+        if (val == "sqrt") {
+            var x = document.getElementById("d").value;
+            document.getElementById("d").value = Math.sqrt(x);
+        }
+    }
+
+</script>
